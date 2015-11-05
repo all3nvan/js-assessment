@@ -3,35 +3,35 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     indexOf : function(arr, item) {
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] === item) {
-                return i;
-            }
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === item) {
+          return i;
         }
+      }
 
-        return -1;
+      return -1;
     },
 
     sum : function(arr) {
-        var sum = 0;
+      var sum = 0;
 
-        for (var i = 0; i < arr.length; i++) {
-            sum += arr[i];
-        }
+      for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
 
-        return sum;
+      return sum;
     },
 
     remove : function(arr, item) {
-        var result = [];
+      var result = [];
 
-        for (var i = 0; i < arr.length; i++) {
-            if (arr[i] !== item) {
-                result.push(arr[i]);
-            }
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] !== item) {
+          result.push(arr[i]);
         }
+      }
 
-        return result;
+      return result;
     },
 
     removeWithoutCopy : function(arr, item) {
@@ -39,8 +39,8 @@ define(function() {
     },
 
     append : function(arr, item) {
-        arr.push(item);
-        return arr;
+      arr.push(item);
+      return arr;
     },
 
     truncate : function(arr) {
