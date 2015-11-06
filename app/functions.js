@@ -17,7 +17,7 @@ define(function() {
     },
 
     makeClosures : function(arr, fn) {
-
+      return fn(arr);
     },
 
     partial : function(fn, str1, str2) {
@@ -25,7 +25,13 @@ define(function() {
     },
 
     useArguments : function() {
+      var sum = 0;
 
+      for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+      }
+
+      return sum;
     },
 
     callIt : function(fn) {
