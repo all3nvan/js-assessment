@@ -35,7 +35,14 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
+      var itemIndex = arr.indexOf(item);
 
+      while (itemIndex !== -1) {
+        arr.splice(itemIndex, 1);
+        itemIndex = arr.indexOf(item);
+      }
+
+      return arr;
     },
 
     append : function(arr, item) {
