@@ -67,7 +67,17 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
+      var result = [];
 
+      for (var i = 0; i < arr.length; i++) {
+        if (index === i) {
+          result.push(item);
+        }
+
+        result.push(arr[i]);
+      }
+
+      return result;
     },
 
     count : function(arr, item) {
