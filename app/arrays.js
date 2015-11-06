@@ -100,7 +100,24 @@ define(function() {
     },
 
     duplicates : function(arr) {
+      var itemSet = {};
+      var duplicates = [];
 
+      for (var i = 0; i < arr.length; i++) {
+        if (!itemSet[arr[i]]) {
+          itemSet[arr[i]] = 0;
+        }
+
+        itemSet[arr[i]]++;
+      }
+
+      for (var item in itemSet) {
+        if (itemSet.hasOwnProperty(item) && itemSet[item] > 1) {
+          duplicates.push(item);
+        }
+      }
+
+      return duplicates;
     },
 
     square : function(arr) {
