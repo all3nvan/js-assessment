@@ -97,7 +97,15 @@ define(function() {
     },
 
     findAllOccurrences : function(arr, target) {
+      var indices = [];
 
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+          indices.push(i);
+        }
+      }
+
+      return indices;
     }
   };
 });
