@@ -100,19 +100,19 @@ define(function() {
     },
 
     duplicates : function(arr) {
-      var itemSet = {};
+      var itemCount = {};
       var duplicates = [];
 
       for (var i = 0; i < arr.length; i++) {
-        if (!itemSet[arr[i]]) {
-          itemSet[arr[i]] = 0;
+        if (!itemCount[arr[i]]) {
+          itemCount[arr[i]] = 0;
         }
 
-        itemSet[arr[i]]++;
+        itemCount[arr[i]]++;
       }
 
-      for (var item in itemSet) {
-        if (itemSet.hasOwnProperty(item) && itemSet[item] > 1) {
+      for (var item in itemCount) {
+        if (itemCount.hasOwnProperty(item) && itemCount[item] > 1) {
           duplicates.push(item);
         }
       }
