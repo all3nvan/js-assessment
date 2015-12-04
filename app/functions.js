@@ -17,7 +17,17 @@ define(function() {
     },
 
     makeClosures : function(arr, fn) {
-      return fn(arr);
+      // fn = function (x) { return x * x; };
+
+      var resultArr = [];
+
+      for (var i = 0; i < arr.length; i++) {
+        resultArr[i] = function() {
+
+        };
+      }
+
+      return resultArr;
     },
 
     partial : function(fn, str1, str2) {
@@ -35,7 +45,8 @@ define(function() {
     },
 
     callIt : function(fn) {
-
+      var args = Array.prototype.slice.call(arguments, 1, arguments.length);
+      return fn.apply(this, args);
     },
 
     partialUsingArguments : function(fn) {
