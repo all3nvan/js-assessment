@@ -11,7 +11,15 @@ define(function() {
     },
 
     iterate : function(obj) {
+      var ownProperties = [];
 
+      for (var property in obj) {
+        if (obj.hasOwnProperty(property)) {
+          ownProperties.push(property + ": " + obj[property]);
+        }
+      }
+
+      return ownProperties;
     }
   };
 });
